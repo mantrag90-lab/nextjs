@@ -1,0 +1,31 @@
+import {connect} from "@/dbConfig/dbConfig";
+import { NextRequest,NextResponse } from "next/server";
+import User from  "@/models/userModel";
+
+connect()
+
+export async function POST(request:NextRequest){
+
+    try {
+       const reqBody = await request.json()
+       const {token} = reqBody 
+
+     const user = await   User.findOne({
+        verifyToken: token,
+        verifyTokenexpiry :{$gt:Date.now()}
+       });
+
+       if(!user){
+        return NextResponse.json({
+            error: "invalid token"
+        },{status: 400})
+       }
+    
+    } catch (error:any) {
+        return NextResponse.json({
+            error:error.message
+        },
+    {status: 500})
+        
+    }
+}
