@@ -20,6 +20,9 @@ export async function POST(request:NextRequest){
             error: "invalid token"
         },{status: 400})
        }
+       user.isVerified = true;
+       user.verifyToken = undefined;
+       user.verifyTokenExpiry = undefined;
     
     } catch (error:any) {
         return NextResponse.json({

@@ -61,7 +61,8 @@ export const sendEmail = async ({
                         emailType === "VERIFY"
                             ? "verify your email"
                             : "reset your password"
-                    }.
+                    }
+                    
                 </p>
             `,
         };
