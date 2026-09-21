@@ -67,7 +67,7 @@ export default function LoginPage() {
             </label>
 
             <input
-                className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+                className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-white"
                 id="email"
                 value={user.email}
                 onChange={(e) =>
@@ -85,7 +85,7 @@ export default function LoginPage() {
             </label>
 
             <input
-                className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+                className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-white"
                 id="password"
                 value={user.password}
                 onChange={(e) =>
@@ -101,7 +101,7 @@ export default function LoginPage() {
             <button
                 onClick={onLogin}
                 disabled={buttonDisabled}
-                className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black disabled:opacity-50"
+                className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-white disabled:opacity-50"
             >
                 {loading ? "Processing..." : "Login"}
             </button>

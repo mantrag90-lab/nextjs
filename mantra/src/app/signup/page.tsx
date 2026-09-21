@@ -56,7 +56,7 @@ export default function SignupPage() {
 
             <label htmlFor="username">Username</label>
             <input
-                className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+                className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-white"
                 id="username"
                 value={user.username}
                 onChange={(e) =>
@@ -68,7 +68,7 @@ export default function SignupPage() {
 
             <label htmlFor="email">Email</label>
             <input
-                className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+                className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-white"
                 id="email"
                 value={user.email}
                 onChange={(e) =>
@@ -80,7 +80,7 @@ export default function SignupPage() {
 
             <label htmlFor="password">Password</label>
             <input
-                className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+                className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-white"
                 id="password"
                 value={user.password}
                 onChange={(e) =>
